@@ -3,9 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Admin/Desktop/RetoConjuntoMoviles/AppTiempoMoviles/app/src/main/res/layout-w1240dp/activity_pantalla_login.xml" value="0.23560910307898258" />
         <entry key="..\:/Users/Admin/Desktop/RetoConjuntoMoviles/AppTiempoMoviles/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/Admin/Desktop/RetoConjuntoMoviles/AppTiempoMoviles/app/src/main/res/layout/activity_maps.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/Admin/Desktop/RetoConjuntoMoviles/AppTiempoMoviles/app/src/main/res/layout/activity_pantalla_login.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/Admin/Desktop/RetoConjuntoMoviles/AppTiempoMoviles/app/src/main/res/layout/activity_pantalla_principal.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/Admin/Desktop/RetoConjuntoMoviles/AppTiempoMoviles/app/src/main/res/layout/activity_pantalla_registrar.xml" value="0.2957427536231884" />
       </map>
     </option>
   </component>

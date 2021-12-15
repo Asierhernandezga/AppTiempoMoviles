@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".PantallaRegistrar">
 
     <LinearLayout
         android:layout_width="412dp"
@@ -35,15 +35,9 @@
             android:id="@+id/btnCrearRegistro"
             android:layout_width="match_parent"
             android:layout_height="59dp"
-            android:onClick="clickBotonEntrar"
-            android:text="@string/entrar" />
-
-        <Button
-            android:id="@+id/btnRegistrar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="clickBotonRegistrar"
-            android:text="@string/registrar" />
+            android:onClick="clickBotonCrearRegistro"
+            android:text="@string/crearRegistro" />
 
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
