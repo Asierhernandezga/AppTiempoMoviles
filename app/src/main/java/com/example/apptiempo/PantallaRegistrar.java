@@ -36,7 +36,5 @@ public class PantallaRegistrar extends AppCompatActivity {
         }else{
             Toast.makeText(this,R.string.registroIncorrectoCamposVacios,Toast.LENGTH_LONG).show();
         }
-
-
     }
 }
