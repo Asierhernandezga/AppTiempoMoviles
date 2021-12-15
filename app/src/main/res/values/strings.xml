@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">AppTiempo</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="entrar">Entrar</string>
+    <string name="nombre">Nombre</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="errorContrasena">Ha habido un error en tu contraseña</string>
+    <string name="entradaCorrecta">Ha entrado correctamente</string>
+    <string name="abrirMapa">Mapa</string>
+    <string name="pantallaPrincipal">Pantalla Principal</string>
 </resources>
