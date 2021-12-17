@@ -7,43 +7,32 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="412dp"
-        android:layout_height="233dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#03A9F4"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" >
 
-        <EditText
-            android:id="@+id/editNombre"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:ems="10"
-            android:hint="@string/nombre"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:id="@+id/editContrasena"
+        <ImageView
+            android:id="@+id/imageViewPortada"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/contrasena"
-            android:inputType="textPassword" />
+            app:srcCompat="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:id="@+id/textViewTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/textoPortada" />
 
         <Button
-            android:id="@+id/btnCrearRegistro"
+            android:id="@+id/btnSiguiente"
             android:layout_width="match_parent"
-            android:layout_height="59dp"
+            android:layout_height="wrap_content"
             android:onClick="clickBotonEntrar"
-            android:text="@string/entrar" />
-
-        <Button
-            android:id="@+id/btnRegistrar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="clickBotonRegistrar"
-            android:text="@string/registrar" />
-
+            android:text="@string/botonSiguiente" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

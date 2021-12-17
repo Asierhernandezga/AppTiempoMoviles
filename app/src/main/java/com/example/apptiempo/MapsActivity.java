@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentActivity;
 import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
@@ -50,6 +51,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      */
     @Override
     public void onMapReady(GoogleMap googleMap) {
+
         mMap = googleMap;
 
 
@@ -62,22 +64,41 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             //                                          int[] grantResults)
             // to handle the case where the user grants the permission. See the documentation
             // for ActivityCompat#requestPermissions for more details.
+
+
             return;
         }
         mMap.setMyLocationEnabled(true);
-        mMap.getUiSettings().setMyLocationButtonEnabled(false);
+
+        //mMap.getUiSettings().setMyLocationButtonEnabled(false); //Quita la opcion del boton
+
+        ubicacionActual();
 
         LatLng elorrieta = new LatLng(ElorrietaLatitud, ElorrietaLongitud);
-
-        LocationManager lm = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
-        Location location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-        double longitude = location.getLongitude();
-        double latitude = location.getLatitude();
-        LatLng miPosicion = new LatLng(longitude, latitude);
-        mMap.addMarker(new MarkerOptions().position(miPosicion).title("Marcado en MiPosicion"));
-
         mMap.addMarker(new MarkerOptions().position(elorrieta).title("Marcado en Elorrieta"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(elorrieta));
-        mMap.setMinZoomPreference(18);
     }
-}
+
+
+    public void ubicacionActual() {
+        LocationManager service = (LocationManager) getSystemService(LOCATION_SERVICE);
+        Criteria criteria = new Criteria();
+        String provider = service.getBestProvider(criteria, false);
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        Location location = service.getLastKnownLocation(provider);
+
+        LatLng userLocation = new LatLng(location.getLatitude(),location.getLongitude());
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(userLocation));
+        mMap.setMinZoomPreference(15);
+        mMap.addMarker(new MarkerOptions().position(userLocation).title("Ubicacion actual inicial"));
+        }
+    }

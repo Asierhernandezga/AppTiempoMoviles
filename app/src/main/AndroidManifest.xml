@@ -12,9 +12,15 @@
         android:theme="@style/Theme.AppTiempo">
         <activity
             android:name=".PantallaRegistrar"
+            android:label="@string/pantallaRegistro"
             android:exported="true" />
         <activity
             android:name=".PantallaPrincipal"
+            android:label="@string/pantallaPrincipal"
+            android:exported="true" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/pantallaLogin"
             android:exported="true" />
 
         <meta-data
@@ -23,10 +29,12 @@
 
         <activity
             android:name=".MapsActivity"
-            android:exported="true"
-            android:label="@string/title_activity_maps" />
+            android:label="@string/pantallaMapa"
+            android:exported="true"/>
+
         <activity
             android:name=".MainActivity"
+            android:label="@string/pantallaMain"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -8,38 +8,36 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText editNombre;
-    private EditText editContrasena;
+    private TextView textViewTitulo;
+    private ImageView imageViewPortada;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editNombre = findViewById(R.id.editNombre);
-        editContrasena = findViewById(R.id.editContrasena);
+        textViewTitulo = findViewById(R.id.textViewTitulo);
+        imageViewPortada = findViewById(R.id.imageViewPortada);
 
     }
 
     public void clickBotonEntrar(View view){
-        String usuario = editNombre.getText().toString();
-        SharedPreferences preferences = getSharedPreferences("contrasena", Context.MODE_PRIVATE);
-        String contrasenaPreferences = preferences.getString("contrasena", "asdf");
-        if(editContrasena.getText().toString().equals(contrasenaPreferences) && usuario.equals("Usuario")) {
-            Toast.makeText(this,R.string.entradaCorrecta,Toast.LENGTH_LONG).show();
-            Intent i = new Intent(this, PantallaPrincipal.class );
-            startActivity(i);
-        }else{
-            Toast.makeText(this,R.string.errorContrasena,Toast.LENGTH_LONG).show();
-        }
-    }
 
-    public void clickBotonRegistrar(View view){
-        Intent i = new Intent(this, PantallaRegistrar.class );
+        /*
+        try {
+            Thread.sleep(300);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        */
+
+        Intent i = new Intent(this, LoginActivity.class );
         startActivity(i);
     }
 }

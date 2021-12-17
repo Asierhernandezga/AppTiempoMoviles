@@ -6,10 +6,18 @@
     <string name="crearRegistro">Crear Registro</string>
     <string name="nombre">Nombre</string>
     <string name="contrasena">Contraseña</string>
+    <string name="repetirContrasena">Repetir Contraseña</string>
     <string name="errorContrasena">Ha habido un error en tu contraseña</string>
     <string name="entradaCorrecta">Ha entrado correctamente</string>
     <string name="registroCorrecto">Se ha registrado correctamente</string>
     <string name="registroIncorrectoCamposVacios">No puede dejar ningun campo vacio</string>
+    <string name="registroContraseñaNoCoincide">No coinciden las contraseñas</string>
     <string name="abrirMapa">Mapa</string>
     <string name="pantallaPrincipal">Pantalla Principal</string>
+    <string name="pantallaLogin">Login</string>
+    <string name="pantallaRegistro">Registro</string>
+    <string name="pantallaMapa">Maps</string>
+    <string name="pantallaMain">App Tiempo</string>
+    <string name="botonSiguiente">Siguiente</string>
+    <string name="textoPortada">Aplicacion diseñada</string>
 </resources>
