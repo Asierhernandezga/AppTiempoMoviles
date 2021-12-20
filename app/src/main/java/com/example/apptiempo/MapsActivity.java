@@ -68,6 +68,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             return;
         }
+
         mMap.setMyLocationEnabled(true);
 
         //mMap.getUiSettings().setMyLocationButtonEnabled(false); //Quita la opcion del boton
@@ -100,5 +101,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.moveCamera(CameraUpdateFactory.newLatLng(userLocation));
         mMap.setMinZoomPreference(15);
         mMap.addMarker(new MarkerOptions().position(userLocation).title("Ubicacion actual inicial"));
+        
         }
     }
