@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E6DED6"
     tools:context=".PantallaPrincipal">
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="413dp"
+        android:layout_width="393dp"
         android:layout_height="186dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -20,6 +21,7 @@
             android:id="@+id/btnNuevaTarea"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="#9A2E2E"
             android:onClick="abrirMapa"
             android:text="@string/abrirMapa" />
 
@@ -30,9 +32,13 @@
         android:layout_width="324dp"
         android:layout_height="150dp"
         android:text="@string/pantallaPrincipal"
-        android:textSize="60sp"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.308" />
 </androidx.constraintlayout.widget.ConstraintLayout>
