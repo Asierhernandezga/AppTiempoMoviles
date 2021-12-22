@@ -20,4 +20,9 @@ public class PantallaPrincipal extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void abrirFoto(View view){
+        Intent i = new Intent(this, PantallaFoto.class );
+        startActivity(i);
+    }
+
 }

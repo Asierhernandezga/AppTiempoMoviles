@@ -2,7 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.apptiempo">
 
+    <uses-feature android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,17 +19,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppTiempo">
         <activity
-            android:name=".PantallaRegistrar"
-            android:label="@string/pantallaRegistro"
+            android:name=".PantallaFoto"
             android:exported="true" />
+        <activity
+            android:name=".PantallaRegistrar"
+            android:exported="true"
+            android:label="@string/pantallaRegistro" />
         <activity
             android:name=".PantallaPrincipal"
-            android:label="@string/pantallaPrincipal"
-            android:exported="true" />
+            android:exported="true"
+            android:label="@string/pantallaPrincipal" />
         <activity
             android:name=".LoginActivity"
-            android:label="@string/pantallaLogin"
-            android:exported="true" />
+            android:exported="true"
+            android:label="@string/pantallaLogin" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -29,13 +40,12 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/pantallaMapa"
-            android:exported="true"/>
-
+            android:exported="true"
+            android:label="@string/pantallaMapa" />
         <activity
             android:name=".MainActivity"
-            android:label="@string/pantallaMain"
-            android:exported="true">
+            android:exported="true"
+            android:label="@string/pantallaMain">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

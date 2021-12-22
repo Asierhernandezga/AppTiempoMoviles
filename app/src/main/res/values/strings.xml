@@ -19,10 +19,12 @@
     <string name="pantallaMapa">Maps</string>
     <string name="pantallaMain">App Tiempo</string>
     <string name="botonSiguiente">Siguiente</string>
-    <string name="textoPortada">Aplicacion diseñada para la prediccion del tiempo\n\n
+    <string name="textoPortada">Aplicacion diseñada para consultar la condicion actual del aire\n\n
         Diseñada en Elorrieta:\n
         Iker Monzon\n
         Iñigo Campos\n
         Asier Hernández
     </string>
+    <string name="abrirFoto">Foto</string>
+    <string name="btnCamara">Camara</string>
 </resources>

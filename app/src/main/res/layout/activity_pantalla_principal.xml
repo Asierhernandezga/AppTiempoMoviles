@@ -25,6 +25,13 @@
             android:onClick="abrirMapa"
             android:text="@string/abrirMapa" />
 
+        <Button
+            android:id="@+id/btnAbrirFoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="abrirFoto"
+            android:text="@string/abrirFoto" />
+
     </LinearLayout>
 
     <TextView
