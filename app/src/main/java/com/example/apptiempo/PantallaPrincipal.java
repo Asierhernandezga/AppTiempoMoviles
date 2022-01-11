@@ -27,6 +27,12 @@ public class PantallaPrincipal extends AppCompatActivity {
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
+    public void abrirConsulta(View view){
+        Intent i = new Intent(this, PantallaConsulta.class );
+        startActivity(i);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    }
+
     @Override
     public void finish() {
         super.finish();

@@ -27,4 +27,15 @@
     </string>
     <string name="abrirFoto">Foto</string>
     <string name="btnCamara">Camara</string>
+    <string name="toastPermisoDenegado">Permiso Denegado</string>
+    <string name="toastNoVolverAPreguntar">No volver a preguntar</string>
+    <string name="abriendoCamara">Abriendo la camara</string>
+    <string name="permisoNecesario">Permiso Necesario</string>
+    <string name="permisoNecesarioCamaraDescripcion">Este permiso se necesita para poder sacar fotos con su dispositivo</string>
+    <string name="permisoNecesarioAlmacenamientoDescripcion">Este permiso se necesita para guardar archivos en su dispositivo</string>
+    <string name="ok">Ok</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="permisoAceptado">Permiso Aceptado</string>
+    <string name="permisoDenegado">Permiso Denegado</string>
+    <string name="abrirConsulta">Consulta</string>
 </resources>
