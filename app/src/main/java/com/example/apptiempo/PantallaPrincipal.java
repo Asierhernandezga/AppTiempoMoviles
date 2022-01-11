@@ -18,11 +18,19 @@ public class PantallaPrincipal extends AppCompatActivity {
     public void abrirMapa(View view){
         Intent i = new Intent(this, MapsActivity.class );
         startActivity(i);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
     public void abrirFoto(View view){
         Intent i = new Intent(this, PantallaFoto.class );
         startActivity(i);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 
 }

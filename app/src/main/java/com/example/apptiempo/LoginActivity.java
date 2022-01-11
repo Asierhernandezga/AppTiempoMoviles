@@ -10,6 +10,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
+
 public class LoginActivity extends AppCompatActivity {
 
     private EditText editNombre;
@@ -33,13 +36,32 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(this,R.string.entradaCorrecta,Toast.LENGTH_LONG).show();
             Intent i = new Intent(this, PantallaPrincipal.class );
             startActivity(i);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }else{
             Toast.makeText(this,R.string.errorContrasena,Toast.LENGTH_LONG).show();
+
+            YoYo.with(Techniques.Shake)
+                    .duration(1000)
+                    .repeat(0)
+                    .playOn(editNombre);
+
+            YoYo.with(Techniques.Shake)
+                    .duration(1000)
+                    .repeat(0)
+                    .playOn(editContrasena);
+
         }
     }
 
     public void clickBotonRegistrar(View view){
         Intent i = new Intent(this, PantallaRegistrar.class );
         startActivity(i);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 }

@@ -10,6 +10,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
+
 public class PantallaRegistrar extends AppCompatActivity {
 
     private EditText editNombre;
@@ -38,12 +41,45 @@ public class PantallaRegistrar extends AppCompatActivity {
                 Toast.makeText(this,R.string.registroCorrecto,Toast.LENGTH_LONG).show();
                 Intent i = new Intent(this, PantallaPrincipal.class );
                 startActivity(i);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             } else {
                 Toast.makeText(this,R.string.registroContraseñaNoCoincide,Toast.LENGTH_LONG).show();
+
+                YoYo.with(Techniques.Shake)
+                        .duration(1000)
+                        .repeat(0)
+                        .playOn(editContrasena);
+
+                YoYo.with(Techniques.Shake)
+                        .duration(1000)
+                        .repeat(0)
+                        .playOn(editContrasena2);
             }
 
         }else{
             Toast.makeText(this,R.string.registroIncorrectoCamposVacios,Toast.LENGTH_LONG).show();
+
+            YoYo.with(Techniques.Shake)
+                    .duration(1000)
+                    .repeat(0)
+                    .playOn(editNombre);
+
+            YoYo.with(Techniques.Shake)
+                    .duration(1000)
+                    .repeat(0)
+                    .playOn(editContrasena);
+
+            YoYo.with(Techniques.Shake)
+                    .duration(1000)
+                    .repeat(0)
+                    .playOn(editContrasena2);
+
         }
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 }
