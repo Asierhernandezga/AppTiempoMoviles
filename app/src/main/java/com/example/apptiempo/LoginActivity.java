@@ -26,7 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button btnEntrar;
     private TextView textViewError;
 
-    ConnectionClass connectionClass;
+    private ConnectionClass connectionClass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
