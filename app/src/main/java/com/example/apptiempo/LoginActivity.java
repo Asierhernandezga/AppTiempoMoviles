@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -13,10 +14,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
 public class LoginActivity extends AppCompatActivity {
 
     private EditText editNombre;
     private EditText editContrasena;
+    private Button btnEntrar;
+
+    ConnectionClass connectionClass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,14 +33,38 @@ public class LoginActivity extends AppCompatActivity {
 
         editNombre = findViewById(R.id.editNombre);
         editContrasena = findViewById(R.id.editContrasena);
+        btnEntrar = findViewById(R.id.btnEntrar);
 
+        connectionClass = new ConnectionClass();
     }
 
     public void clickBotonEntrar(View view){
         String usuario = editNombre.getText().toString();
+        String contraseña = editContrasena.getText().toString();
+
+        String use ="";
+        String contr= "";
+
         SharedPreferences preferences = getSharedPreferences("contrasena", Context.MODE_PRIVATE);
         String contrasenaPreferences = preferences.getString("contrasena", "asdf");
-        if(editContrasena.getText().toString().equals(contrasenaPreferences) && usuario.equals("Usuario")) {
+
+        try {
+            Connection con = connectionClass.CONN();
+            if (con == null) {
+                editNombre.setText("internet error");
+
+            } else {
+
+                String query = "select User, Password from usuarios";
+               Statement st = con.createStatement();
+                ResultSet rs = st.executeQuery(query);
+                while (rs.next()) {
+                    use = rs.getString("User");
+                    contr = rs.getString("Password");
+                    Toast.makeText(this,contr,Toast.LENGTH_LONG).show();
+                }
+
+        if(editContrasena.getText().toString().equals(contr) && editNombre.getText().toString().equals(use)) {
             Toast.makeText(this,R.string.entradaCorrecta,Toast.LENGTH_LONG).show();
             Intent i = new Intent(this, PantallaPrincipal.class );
             startActivity(i);
@@ -50,6 +82,12 @@ public class LoginActivity extends AppCompatActivity {
                     .repeat(0)
                     .playOn(editContrasena);
 
+        }
+
+            }
+
+        } catch (Exception ex) {
+            editNombre.setText("error");
         }
     }
 
