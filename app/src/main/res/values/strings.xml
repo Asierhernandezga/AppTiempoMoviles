@@ -35,6 +35,8 @@
     <string name="permisoNecesarioAlmacenamientoDescripcion">Este permiso se necesita para guardar archivos en su dispositivo</string>
     <string name="ok">Ok</string>
     <string name="cancelar">Cancelar</string>
+    <string name="error">Error</string>
+    <string name="internetError">Error de conexion</string>
     <string name="permisoAceptado">Permiso Aceptado</string>
     <string name="permisoDenegado">Permiso Denegado</string>
     <string name="abrirConsulta">Consulta</string>

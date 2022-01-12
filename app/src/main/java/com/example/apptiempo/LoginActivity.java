@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +24,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText editNombre;
     private EditText editContrasena;
     private Button btnEntrar;
+    private TextView textViewError;
 
     ConnectionClass connectionClass;
 
@@ -34,6 +36,7 @@ public class LoginActivity extends AppCompatActivity {
         editNombre = findViewById(R.id.editNombre);
         editContrasena = findViewById(R.id.editContrasena);
         btnEntrar = findViewById(R.id.btnEntrar);
+        textViewError =findViewById(R.id.textViewError);
 
         connectionClass = new ConnectionClass();
     }
@@ -45,23 +48,19 @@ public class LoginActivity extends AppCompatActivity {
         String use ="";
         String contr= "";
 
-        SharedPreferences preferences = getSharedPreferences("contrasena", Context.MODE_PRIVATE);
-        String contrasenaPreferences = preferences.getString("contrasena", "asdf");
-
         try {
             Connection con = connectionClass.CONN();
             if (con == null) {
-                editNombre.setText("internet error");
+                textViewError.setText(R.string.internetError);
 
             } else {
 
-                String query = "select User, Password from usuarios";
+                String query = "select User, Password from usuarios where User = "  + "\'" + usuario + "\' and Password = "  + "\'" + contraseña + "\'";
                Statement st = con.createStatement();
                 ResultSet rs = st.executeQuery(query);
                 while (rs.next()) {
                     use = rs.getString("User");
                     contr = rs.getString("Password");
-                    Toast.makeText(this,contr,Toast.LENGTH_LONG).show();
                 }
 
         if(editContrasena.getText().toString().equals(contr) && editNombre.getText().toString().equals(use)) {
@@ -87,7 +86,7 @@ public class LoginActivity extends AppCompatActivity {
             }
 
         } catch (Exception ex) {
-            editNombre.setText("error");
+            textViewError.setText(R.string.error);
         }
     }
 

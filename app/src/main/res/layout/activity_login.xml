@@ -63,6 +63,13 @@
             android:onClick="clickBotonRegistrar"
             android:text="@string/registrar" />
 
+        <TextView
+            android:id="@+id/textViewError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="18sp" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
