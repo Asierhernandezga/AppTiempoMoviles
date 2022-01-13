@@ -29,7 +29,8 @@ public class PantallaPrincipal extends AppCompatActivity {
 
                 Manifest.permission.CALL_PHONE,
                 Manifest.permission.SEND_SMS,
-                Manifest.permission.CAMERA
+                Manifest.permission.CAMERA,
+                Manifest.permission.ACCESS_COARSE_LOCATION
         };
 
     }
