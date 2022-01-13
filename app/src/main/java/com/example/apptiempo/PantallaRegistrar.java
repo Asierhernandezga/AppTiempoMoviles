@@ -15,6 +15,8 @@ import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 public class PantallaRegistrar extends AppCompatActivity {
 
@@ -57,6 +59,12 @@ public class PantallaRegistrar extends AppCompatActivity {
                     if (con == null) {
                         textViewError.setText(R.string.internetError);
                     } else {
+
+                        String numero ="2";
+                        String query = "insert into usuarios values('"+numero+"','"+usuario+"','"+contraseña+"')";
+
+                        Statement st = con.createStatement();
+                        st.executeUpdate(query);
 
                         Toast.makeText(this,R.string.registroCorrecto,Toast.LENGTH_LONG).show();
                 Intent i = new Intent(this, PantallaPrincipal.class );
