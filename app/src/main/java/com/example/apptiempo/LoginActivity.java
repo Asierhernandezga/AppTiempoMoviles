@@ -48,6 +48,8 @@ public class LoginActivity extends AppCompatActivity {
         String use ="";
         String contr= "";
 
+        if(!usuario.equals("") && !contraseña.equals("")) {
+
         try {
             Connection con = connectionClass.CONN();
             if (con == null) {
@@ -87,6 +89,21 @@ public class LoginActivity extends AppCompatActivity {
 
         } catch (Exception ex) {
             textViewError.setText(R.string.error);
+        }
+
+        }else{
+            Toast.makeText(this,R.string.registroIncorrectoCamposVacios,Toast.LENGTH_LONG).show();
+
+            YoYo.with(Techniques.Shake)
+                    .duration(1000)
+                    .repeat(0)
+                    .playOn(editNombre);
+
+            YoYo.with(Techniques.Shake)
+                    .duration(1000)
+                    .repeat(0)
+                    .playOn(editContrasena);
+
         }
     }
 

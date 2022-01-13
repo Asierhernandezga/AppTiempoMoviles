@@ -14,7 +14,7 @@ public class ConnectionClass {
 
     String url = "jdbc:mysql://10.5.13.31/app_tiempo";
     String un = "app";
-    String password = "789";
+    String password = "123";
 
     @SuppressLint("NewApi")
     public Connection CONN() {
