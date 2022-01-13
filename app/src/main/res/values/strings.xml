@@ -39,5 +39,5 @@
     <string name="internetError">Error de conexion</string>
     <string name="permisoAceptado">Permiso Aceptado</string>
     <string name="permisoDenegado">Permiso Denegado</string>
-    <string name="abrirConsulta">Consulta</string>
+    <string name="abrirPermisos">Permisos</string>
 </resources>

@@ -25,9 +25,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppTiempo">
         <activity
-            android:name=".PantallaConsulta"
-            android:exported="true" />
-        <activity
             android:name=".PantallaFoto"
             android:exported="true" />
         <activity
