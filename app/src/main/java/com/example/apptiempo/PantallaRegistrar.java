@@ -60,11 +60,19 @@ public class PantallaRegistrar extends AppCompatActivity {
                         textViewError.setText(R.string.internetError);
                     } else {
 
-                        String numero ="2";
-                        String query = "insert into usuarios values('"+numero+"','"+usuario+"','"+contraseña+"')";
-
+                        int numero =0;
+                        String query = "select ID from usuarios where ID in (select max(ID) from usuarios)";
                         Statement st = con.createStatement();
-                        st.executeUpdate(query);
+                        ResultSet rs = st.executeQuery(query);
+                        while (rs.next()) {
+                            numero = rs.getInt("ID");
+                        }
+                        numero++;
+
+                        String query2 = "insert into usuarios values('"+numero+"','"+usuario+"','"+contraseña+"')";
+
+                        Statement st2 = con.createStatement();
+                        st2.executeUpdate(query2);
 
                         Toast.makeText(this,R.string.registroCorrecto,Toast.LENGTH_LONG).show();
                 Intent i = new Intent(this, PantallaPrincipal.class );
