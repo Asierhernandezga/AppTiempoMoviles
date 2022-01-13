@@ -12,7 +12,8 @@ public class ConnectionClass {
 
     String classs = "com.mysql.jdbc.Driver";
 
-    String url = "jdbc:mysql://10.5.13.31/app_tiempo";
+    String url = "jdbc:mysql://192.168.0.10/app_tiempo";
+    //String url = "jdbc:mysql://10.5.13.31/app_tiempo";
     String un = "app";
     String password = "123";
 
