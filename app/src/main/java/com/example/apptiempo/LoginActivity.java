@@ -45,6 +45,10 @@ public class LoginActivity extends AppCompatActivity {
         String usuario = editNombre.getText().toString();
         String contraseña = editContrasena.getText().toString();
 
+        //Temporal para moviles
+        Intent i2 = new Intent(this, PantallaPrincipal.class );
+        startActivity(i2);
+
         String use ="";
         String contr= "";
 
