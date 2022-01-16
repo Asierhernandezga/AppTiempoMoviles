@@ -27,10 +27,9 @@ public class PantallaPrincipal extends AppCompatActivity {
 
         PERMISSIONS = new String[] {
 
-                Manifest.permission.CALL_PHONE,
-                Manifest.permission.SEND_SMS,
                 Manifest.permission.CAMERA,
-                Manifest.permission.ACCESS_COARSE_LOCATION
+                Manifest.permission.ACCESS_COARSE_LOCATION,
+                Manifest.permission.ACCESS_FINE_LOCATION
         };
 
     }
@@ -75,23 +74,20 @@ public class PantallaPrincipal extends AppCompatActivity {
         if (requestCode == 1) {
 
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(this, "Calling Permission is granted", Toast.LENGTH_SHORT).show();
-            }else {
-                Toast.makeText(this, "Calling Permission is denied", Toast.LENGTH_SHORT).show();
-            }
-
-            if (grantResults[1] == PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(this, "SMS Permission is granted", Toast.LENGTH_SHORT).show();
-            }else {
-                Toast.makeText(this, "SMS Permission is denied", Toast.LENGTH_SHORT).show();
-            }
-
-            if (grantResults[2] == PackageManager.PERMISSION_GRANTED) {
                 Toast.makeText(this, "Camera Permission is granted", Toast.LENGTH_SHORT).show();
             }else {
                 Toast.makeText(this, "Camera Permission is denied", Toast.LENGTH_SHORT).show();
             }
-
+            if (grantResults[1] == PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(this, "Coarse location accepted", Toast.LENGTH_SHORT).show();
+            }else {
+                Toast.makeText(this, "Coarse location accepted", Toast.LENGTH_SHORT).show();
+            }
+            if (grantResults[2] == PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(this, "Fine location accepted", Toast.LENGTH_SHORT).show();
+            }else {
+                Toast.makeText(this, "Fine location accepted", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 
