@@ -64,6 +64,7 @@ public class LoginActivity extends AppCompatActivity {
             } else {
 
                 String query = "select User, Password from usuarios where User = "  + "\'" + usuario + "\' and Password = "  + "\'" + contraseña + "\'";
+
                Statement st = con.createStatement();
                 ResultSet rs = st.executeQuery(query);
                 while (rs.next()) {

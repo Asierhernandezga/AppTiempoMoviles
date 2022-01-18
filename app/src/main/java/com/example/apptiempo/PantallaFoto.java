@@ -1,24 +1,28 @@
 package com.example.apptiempo;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-
 import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.sqlite.SQLiteStatement;
 import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
-import android.widget.VideoView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.sql.Connection;
+import java.sql.Statement;
 
 import permissions.dispatcher.NeedsPermission;
 import permissions.dispatcher.OnNeverAskAgain;
@@ -35,6 +39,8 @@ public class PantallaFoto extends AppCompatActivity {
     private static final int REQUEST_IMAGE_CAPTURE = 1;
     private Button btnCamara;
     private ImageView imgView;
+    private ConnectionClass connectionClass;
+    private String s;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +49,8 @@ public class PantallaFoto extends AppCompatActivity {
 
         btnCamara = findViewById(R.id.btnCamara);
         imgView = findViewById(R.id.imageView);
+
+        connectionClass = new ConnectionClass();
 
         btnCamara.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -155,9 +163,47 @@ public class PantallaFoto extends AppCompatActivity {
 
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1 && resultCode == RESULT_OK) {
+            Intent intento1 = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            File foto = new File(getExternalFilesDir(null), "hola");
+            intento1.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(foto));
             Bundle extras = data.getExtras();
             Bitmap imgBitmap = (Bitmap) extras.get("data");
             imgView.setImageBitmap(imgBitmap);
+
+            try{
+                Connection con = connectionClass.CONN();
+
+               // PreparedStatement ps = con.prepareStatement("insert into lugares_usuario(ID_Espacio,ID_Usuario,Foto,Favorito) values(?,?,?,?)");
+
+                String sql = "INSERT INTO lugares_usuario (ID_Espacio, ID_Usuario,Foto,Favorito) VALUES(?,?,?,?)";
+
+                Statement st2 = con.createStatement();
+
+                ByteArrayOutputStream baos = new ByteArrayOutputStream(20480);
+                imgBitmap.compress(Bitmap.CompressFormat.PNG, 0 , baos);
+                byte[] blob = baos.toByteArray();
+
+                SQLiteStatement insert = st2.compileStatement(sql);
+                insert.execute(1);
+                ps.setInt(2, 1);
+                insert.bindBlob(3, blob);
+                ps.setInt(4,1);
+                ps.executeUpdate();
+
+
+                st2.executeUpdate(sql);
+
+                insert.clearBindings();
+                insert.bindBlob(2, blob);
+                insert.executeInsert();
+                db.close();
+
+
+
+                Toast.makeText(this, R.string.toastNoVolverAPreguntar, Toast.LENGTH_SHORT).show();
+            }catch(Exception ex){
+                ex.printStackTrace();
+            }
         }
     }
 
