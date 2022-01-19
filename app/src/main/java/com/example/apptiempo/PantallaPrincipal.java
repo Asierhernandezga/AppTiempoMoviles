@@ -29,7 +29,9 @@ public class PantallaPrincipal extends AppCompatActivity {
 
                 Manifest.permission.CAMERA,
                 Manifest.permission.ACCESS_COARSE_LOCATION,
-                Manifest.permission.ACCESS_FINE_LOCATION
+                Manifest.permission.ACCESS_FINE_LOCATION,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                Manifest.permission.READ_EXTERNAL_STORAGE
         };
 
     }
@@ -87,6 +89,16 @@ public class PantallaPrincipal extends AppCompatActivity {
                 Toast.makeText(this, "Fine location accepted", Toast.LENGTH_SHORT).show();
             }else {
                 Toast.makeText(this, "Fine location accepted", Toast.LENGTH_SHORT).show();
+            }
+            if (grantResults[3] == PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(this, "Escritura de archivos activada", Toast.LENGTH_SHORT).show();
+            }else {
+                Toast.makeText(this, "Escritura de archivos denegada", Toast.LENGTH_SHORT).show();
+            }
+            if (grantResults[4] == PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(this, "Lectura de archivos activada", Toast.LENGTH_SHORT).show();
+            }else {
+                Toast.makeText(this, "Escritura de archivos denegada", Toast.LENGTH_SHORT).show();
             }
         }
     }
