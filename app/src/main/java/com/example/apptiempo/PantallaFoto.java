@@ -165,11 +165,11 @@ public class PantallaFoto extends AppCompatActivity {
         if (requestCode == 1 && resultCode == RESULT_OK) {
             Intent intento1 = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
             File foto = new File(getExternalFilesDir(null), "hola");
-            intento1.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(foto));
+            //intento1.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(foto));
             Bundle extras = data.getExtras();
             Bitmap imgBitmap = (Bitmap) extras.get("data");
             imgView.setImageBitmap(imgBitmap);
-
+/*
             try{
                 Connection con = connectionClass.CONN();
 
@@ -204,6 +204,8 @@ public class PantallaFoto extends AppCompatActivity {
             }catch(Exception ex){
                 ex.printStackTrace();
             }
+
+ */
         }
     }
 
