@@ -1,16 +1,11 @@
 package com.example.apptiempo;
 
-import android.Manifest;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.database.sqlite.SQLiteStatement;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.os.FileUtils;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
@@ -18,11 +13,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
 
 import java.io.ByteArrayOutputStream;
@@ -34,15 +25,7 @@ import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.Base64;
-
-import permissions.dispatcher.NeedsPermission;
-import permissions.dispatcher.OnNeverAskAgain;
-import permissions.dispatcher.OnPermissionDenied;
-import permissions.dispatcher.OnShowRationale;
-import permissions.dispatcher.PermissionRequest;
-import permissions.dispatcher.RuntimePermissions;
+import android.util.Base64;
 
 public class PantallaFoto extends AppCompatActivity {
 
@@ -118,18 +101,26 @@ public class PantallaFoto extends AppCompatActivity {
 
                 InputStream is = new FileInputStream(imagenArchivo);
 
+                //encode image to base64 string
                 Bitmap imgBitmapp = BitmapFactory.decodeFile(rutaImagen);
+                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                imgBitmapp.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+                byte[] imageBytes = baos.toByteArray();
+                String imageString = Base64.encodeToString(imageBytes, Base64.DEFAULT);
 
-                ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-                imgBitmapp.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
-                byte[] byteArray = byteArrayOutputStream .toByteArray();
-
-                String encoded = Base64.encodeToString(byteArray, Base64.DEFAULT);
+                //decode base64 string to image
+                /*
+                imageBytes = Base64.decode(imageString, Base64.DEFAULT);
+                Bitmap decodedImage = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
+                image.setImageBitmap(decodedImage);
+                */
 
                 PreparedStatement st = con.prepareStatement("insert into fotos values(?,?,?)");
-                st.setString(1, "paisajssee.jpg");
-                st.setBlob(2,is);
+                st.setString(1, "lavidalavidalavida.jpg");
+                st.setString(2,imageString);
                 st.setString(3, rutaImagen);
+
+                Toast.makeText(this,imageString,Toast.LENGTH_LONG).show();
 
                 st.execute();
                 is.close();

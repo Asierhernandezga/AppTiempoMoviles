@@ -33,6 +33,13 @@
             android:text="@string/abrirFoto" />
 
         <Button
+            android:id="@+id/btnProvincias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="abrirProvincias"
+            android:text="@string/Provincias" />
+
+        <Button
             android:id="@+id/btnAbrirPermisos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

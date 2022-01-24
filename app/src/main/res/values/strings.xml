@@ -40,4 +40,8 @@
     <string name="permisoAceptado">Permiso Aceptado</string>
     <string name="permisoDenegado">Permiso Denegado</string>
     <string name="abrirPermisos">Permisos</string>
+    <string name="Provincias">Provincias</string>
+    <string name="Bizkaia">Bizkaia</string>
+    <string name="Araba">Araba</string>
+    <string name="Gipuzkoa">Gipuzkoa</string>
 </resources>

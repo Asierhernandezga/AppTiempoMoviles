@@ -48,6 +48,12 @@ public class PantallaPrincipal extends AppCompatActivity {
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
+    public void abrirProvincias(View view){
+        Intent i = new Intent(this, Provincias.class );
+        startActivity(i);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    }
+
     public void activarPermisos(View view){
         if (!hasPermissions(PantallaPrincipal.this,PERMISSIONS)) {
             ActivityCompat.requestPermissions(PantallaPrincipal.this,PERMISSIONS,1);
