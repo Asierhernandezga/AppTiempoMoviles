@@ -44,4 +44,5 @@
     <string name="Bizkaia">Bizkaia</string>
     <string name="Araba">Araba</string>
     <string name="Gipuzkoa">Gipuzkoa</string>
+    <string name="title_activity_maps_consulta">MapsActivityConsulta</string>
 </resources>

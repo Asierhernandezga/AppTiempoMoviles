@@ -19,7 +19,6 @@ public class Estaciones extends AppCompatActivity {
     private LinearLayout linearLayout;
     private ConnectionClass connectionClass;
     private Connection con;
-    private Connection con1;
 
     private int idProvinciaBizkaia = 1;
     private int iDMunicipioExacto;
@@ -81,7 +80,7 @@ public class Estaciones extends AppCompatActivity {
         textViewTareaGeneral.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(esto,Estaciones.class);
+                Intent i=new Intent(esto,MapsActivityConsulta.class);
                 i.putExtra("nombre", textViewTareaGeneral.getText().toString());
                 startActivity(i);
             }
