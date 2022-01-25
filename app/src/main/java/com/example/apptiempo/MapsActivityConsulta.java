@@ -122,7 +122,6 @@ public class MapsActivityConsulta extends FragmentActivity implements OnMapReady
                     mMap.setMinZoomPreference(15);
                     mMap.addMarker(new MarkerOptions().position(userLocation).title("Ubicacion actual inicial"));
                     */
-
             }
 
             @Override
