@@ -5,27 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#E6DED6"
-    tools:context=".ArabaConsultas">
-
-    <TextView
-        android:id="@+id/txtPantallaBizkaia"
-        android:layout_width="324dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="30dp"
-        android:text="@string/Araba"
-        android:textAlignment="center"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayoutt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.41" />
+    tools:context=".Estaciones">
 
     <ScrollView
-        android:layout_width="381dp"
-        android:layout_height="413dp"
+        android:layout_width="408dp"
+        android:layout_height="498dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.533"

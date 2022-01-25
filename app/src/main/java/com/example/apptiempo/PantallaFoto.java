@@ -102,11 +102,14 @@ public class PantallaFoto extends AppCompatActivity {
                 InputStream is = new FileInputStream(imagenArchivo);
 
                 //encode image to base64 string
+                /*
                 Bitmap imgBitmapp = BitmapFactory.decodeFile(rutaImagen);
                 ByteArrayOutputStream baos = new ByteArrayOutputStream();
                 imgBitmapp.compress(Bitmap.CompressFormat.JPEG, 100, baos);
                 byte[] imageBytes = baos.toByteArray();
                 String imageString = Base64.encodeToString(imageBytes, Base64.DEFAULT);
+
+                 */
 
                 //decode base64 string to image
                 /*
@@ -115,12 +118,13 @@ public class PantallaFoto extends AppCompatActivity {
                 image.setImageBitmap(decodedImage);
                 */
 
-                PreparedStatement st = con.prepareStatement("insert into fotos values(?,?,?)");
-                st.setString(1, "lavidalavidalavida.jpg");
-                st.setString(2,imageString);
+                PreparedStatement st = con.prepareStatement("insert into lugares_usuario values(?,?,?,?)");
+                //st.setString(1, "lavidalavidalavida.jpg");
+                st.setInt(1,1);
+                st.setInt(2,1);
+                //st.setInt(2,imageString);
                 st.setString(3, rutaImagen);
-
-                Toast.makeText(this,imageString,Toast.LENGTH_LONG).show();
+                st.setInt(4, 1);
 
                 st.execute();
                 is.close();
