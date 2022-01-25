@@ -45,4 +45,6 @@
     <string name="Araba">Araba</string>
     <string name="Gipuzkoa">Gipuzkoa</string>
     <string name="title_activity_maps_consulta">MapsActivityConsulta</string>
+    <string name="estaciones">Estaciones</string>
+    <string name="estacionesDatos">Estaciones Datos</string>
 </resources>

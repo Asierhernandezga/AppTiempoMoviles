@@ -1,26 +1,23 @@
 package com.example.apptiempo;
 
-import androidx.annotation.NonNull;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import androidx.fragment.app.FragmentActivity;
-
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.widget.TextView;
 
-import com.google.android.gms.maps.CameraUpdateFactory;
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.FragmentActivity;
+
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.example.apptiempo.databinding.ActivityMapsConsultaBinding;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -87,6 +84,7 @@ public class MapsActivityConsulta extends FragmentActivity implements OnMapReady
                 ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             return;
         }
+
 
         mMap.setMyLocationEnabled(true);
         //mMap.getUiSettings().setMyLocationButtonEnabled(false); //Quita la opcion del boton

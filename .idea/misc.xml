@@ -4,9 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Admin/Desktop/RetoConjuntoMoviles/AppTiempoMoviles/app/src/main/res/layout-w1240dp/activity_pantalla_login.xml" value="0.23560910307898258" />
+        <entry key="..\:/Users/Admin/Desktop/RetoConjuntoMoviles/AppTiempoMoviles/app/src/main/res/layout/activity_araba_consultas.xml" value="0.2713541666666667" />
+        <entry key="..\:/Users/Admin/Desktop/RetoConjuntoMoviles/AppTiempoMoviles/app/src/main/res/layout/activity_bizkaia_consultas.xml" value="0.2713541666666667" />
+        <entry key="..\:/Users/Admin/Desktop/RetoConjuntoMoviles/AppTiempoMoviles/app/src/main/res/layout/activity_estaciones.xml" value="0.33" />
+        <entry key="..\:/Users/Admin/Desktop/RetoConjuntoMoviles/AppTiempoMoviles/app/src/main/res/layout/activity_estaciones_datos.xml" value="0.2713541666666667" />
         <entry key="..\:/Users/Admin/Desktop/RetoConjuntoMoviles/AppTiempoMoviles/app/src/main/res/layout/activity_login.xml" value="0.2171875" />
         <entry key="..\:/Users/Admin/Desktop/RetoConjuntoMoviles/AppTiempoMoviles/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/Admin/Desktop/RetoConjuntoMoviles/AppTiempoMoviles/app/src/main/res/layout/activity_maps.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/Admin/Desktop/RetoConjuntoMoviles/AppTiempoMoviles/app/src/main/res/layout/activity_maps_consulta.xml" value="0.2713541666666667" />
         <entry key="..\:/Users/Admin/Desktop/RetoConjuntoMoviles/AppTiempoMoviles/app/src/main/res/layout/activity_pantalla_consulta.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/Admin/Desktop/RetoConjuntoMoviles/AppTiempoMoviles/app/src/main/res/layout/activity_pantalla_foto.xml" value="0.2694746376811594" />
         <entry key="..\:/Users/Admin/Desktop/RetoConjuntoMoviles/AppTiempoMoviles/app/src/main/res/layout/activity_pantalla_login.xml" value="0.2957427536231884" />

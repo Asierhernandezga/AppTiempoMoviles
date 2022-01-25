@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#E6DED6"
-    tools:context=".Estaciones">
+    tools:context=".EstacionesDatos">
 
     <TextView
-        android:id="@+id/txtPantallaEstaciones"
+        android:id="@+id/txtPantallaEstacionesDatos"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_marginTop="30dp"
-        android:text="@string/estaciones"
+        android:text="@string/estacionesDatos"
         android:textAlignment="center"
         android:textSize="34sp"
         android:textStyle="bold"
@@ -25,7 +25,7 @@
 
     <ScrollView
         android:layout_width="381dp"
-        android:layout_height="462dp"
+        android:layout_height="483dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.533"
@@ -39,6 +39,13 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <Button
+                android:id="@+id/btnMapa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#9A2E2E"
+                android:onClick="abrirMapa"
+                android:text="@string/abrirMapa" />
         </LinearLayout>
     </ScrollView>
 
