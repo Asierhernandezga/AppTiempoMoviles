@@ -46,6 +46,7 @@
                 android:backgroundTint="#9A2E2E"
                 android:onClick="abrirMapa"
                 android:text="@string/abrirMapa" />
+
         </LinearLayout>
     </ScrollView>
 

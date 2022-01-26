@@ -3,9 +3,12 @@ package com.example.apptiempo;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.StrictMode;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
@@ -20,6 +23,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Connection;
@@ -33,11 +37,17 @@ public class PantallaFoto extends AppCompatActivity {
 
     private static final int REQUEST_IMAGE_CAPTURE = 1;
     private Button btnCamara;
+    private Button btnCamara2;
     private ImageView imgView;
     private ConnectionClass connectionClass;
     private String s;
 
+    private  File imagenArchivo;
     private  String rutaImagen;
+
+    private BitmapDrawable drawable;
+    private Bitmap bitmap;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +55,7 @@ public class PantallaFoto extends AppCompatActivity {
         setContentView(R.layout.activity_pantalla_foto);
 
         btnCamara = findViewById(R.id.btnCamara);
+        btnCamara2 = findViewById(R.id.btnCamara2);
         imgView = findViewById(R.id.imageView);
 
         connectionClass = new ConnectionClass();
@@ -53,6 +64,13 @@ public class PantallaFoto extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 abrirCamara();
+            }
+        });
+
+        btnCamara2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                compartirImagen();
             }
         });
 
@@ -76,7 +94,7 @@ public class PantallaFoto extends AppCompatActivity {
 
         // if(intent.resolveActivity(getPackageManager()) != null) {
 
-        File imagenArchivo = null;
+        imagenArchivo = null;
 
         try {
 
@@ -92,9 +110,6 @@ public class PantallaFoto extends AppCompatActivity {
             Uri fotoUri = FileProvider.getUriForFile(this, "com.example.apptiempo.fileprovider", imagenArchivo);
             intent.putExtra(MediaStore.EXTRA_OUTPUT, fotoUri);
             startActivityForResult(intent, 1);
-
-
-
 
             try {
                 Connection con = connectionClass.CONN();
@@ -135,6 +150,7 @@ public class PantallaFoto extends AppCompatActivity {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+
         }
     }
    // }
@@ -147,6 +163,37 @@ public class PantallaFoto extends AppCompatActivity {
         rutaImagen = imagen.getAbsolutePath();
         return imagen;
     }
+
+    private void compartirImagen() {
+
+        Toast.makeText(this, "Entra", Toast.LENGTH_SHORT).show();
+
+
+        StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+        StrictMode.setVmPolicy(builder.build());
+
+        BitmapDrawable drawable = (BitmapDrawable) imgView.getDrawable();
+        Bitmap bitmap = drawable.getBitmap();
+
+        File file = new File(getExternalCacheDir()+"/"+getResources().getString(R.string.app_name)+".png");
+        Intent shareint;
+
+        try {
+            FileOutputStream outputStream = new FileOutputStream(file);
+            bitmap.compress(Bitmap.CompressFormat.JPEG,100,outputStream);
+            outputStream.flush();
+            outputStream.close();
+            shareint = new Intent(Intent.ACTION_SEND);
+            shareint.setType("image/*");
+            shareint.putExtra(Intent.EXTRA_STREAM,Uri.parse("file://"+rutaImagen));
+            shareint.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        } catch (Exception e) {
+            throw  new RuntimeException(e);
+        }
+        startActivity(Intent.createChooser(shareint,"Share image Via:"));
+        
+    }
+
 
     @Override
     public void finish() {
