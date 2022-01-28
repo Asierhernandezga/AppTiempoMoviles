@@ -19,7 +19,6 @@ public class Estaciones extends AppCompatActivity {
     private ConnectionClass connectionClass;
     private Connection con;
 
-    private int idProvinciaBizkaia = 1;
     private int iDMunicipioExacto;
     private String estacionExacta;
     private Context esto = this;
@@ -79,6 +78,10 @@ public class Estaciones extends AppCompatActivity {
         textViewTareaGeneral.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
+                //String nombreEstacion = textViewTareaGeneral.getText().toString();
+
                 Intent i=new Intent(esto,EstacionesDatos.class);
                 i.putExtra("nombre", textViewTareaGeneral.getText().toString());
                 startActivity(i);
