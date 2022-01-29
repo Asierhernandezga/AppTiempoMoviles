@@ -33,12 +33,6 @@ public class PantallaPrincipal extends AppCompatActivity {
 
     }
 
-    public void abrirMapa(View view){
-        Intent i = new Intent(this, MapsActivity.class );
-        startActivity(i);
-        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-    }
-
     public void abrirFoto(View view){
         Intent i = new Intent(this, PantallaFoto.class );
         startActivity(i);
@@ -53,6 +47,12 @@ public class PantallaPrincipal extends AppCompatActivity {
 
     public void abrirTop5(View view){
         Intent i = new Intent(this, PantallaTop5.class );
+        startActivity(i);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    }
+
+    public void acercaDe(View view){
+        Intent i = new Intent(this, PantallaAcercaDe.class );
         startActivity(i);
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }

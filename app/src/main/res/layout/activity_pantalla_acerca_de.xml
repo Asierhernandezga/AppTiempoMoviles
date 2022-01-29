@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PantallaAcercaDe">
+
+    <LinearLayout
+        android:layout_width="363dp"
+        android:layout_height="266dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.922">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dondeEncontrarnos" />
+
+        <Button
+            android:id="@+id/btnNuevaTarea2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#9A2E2E"
+            android:onClick="abrirMapa"
+            android:text="@string/abrirMapa" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtPantallaAcercaDe"
+        android:layout_width="279dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/acercaDe"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.308" />
+
+    <TableLayout
+        android:layout_width="384dp"
+        android:layout_height="209dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.394">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="46dp">
+
+            <TextView
+                android:id="@+id/txtNombreApp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/nombreApp" />
+
+            <TextView
+                android:id="@+id/txtAppName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="52dp">
+
+            <TextView
+                android:id="@+id/txtVersionApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/versionApp" />
+
+            <TextView
+                android:id="@+id/txtAppVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/appVersion" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtFechaVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fechaVersionApp" />
+
+            <TextView
+                android:id="@+id/txtFecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="29/01/2022" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtCorreoContacto2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/correoContacto" />
+
+            <TextView
+                android:id="@+id/txtCorreo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="asier.hernandezga@elorrieta-errekamari.com" />
+
+        </TableRow>
+
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

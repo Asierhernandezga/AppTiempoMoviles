@@ -9,21 +9,13 @@
 
     <LinearLayout
         android:id="@+id/linearLayoutt"
-        android:layout_width="397dp"
-        android:layout_height="248dp"
+        android:layout_width="399dp"
+        android:layout_height="298dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
-        <Button
-            android:id="@+id/btnNuevaTarea"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#9A2E2E"
-            android:onClick="abrirMapa"
-            android:text="@string/abrirMapa" />
 
         <Button
             android:id="@+id/btnAbrirFoto"
@@ -45,6 +37,13 @@
             android:layout_height="wrap_content"
             android:onClick="abrirTop5"
             android:text="@string/top5" />
+
+        <Button
+            android:id="@+id/btnAcercaDe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="acercaDe"
+            android:text="@string/acercaDe" />
 
         <Button
             android:id="@+id/btnAbrirPermisos"

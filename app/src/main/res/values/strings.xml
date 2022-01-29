@@ -62,4 +62,11 @@
     <string name="permisosEscrituraArchivosDenegada">Escritura de archivos denegada</string>
     <string name="permisosLecturaArchivosAceptada">Lectura de archivos activada</string>
     <string name="permisosLecturaArchivosDenegada">Lectura de archivos denegada</string>
+    <string name="acercaDe">Acerca de nosotros</string>
+    <string name="nombreApp">Nombre de la App:</string>
+    <string name="versionApp">Version de la App:</string>
+    <string name="appVersion">1,0</string>
+    <string name="fechaVersionApp">Fecha de la versión:</string>
+    <string name="correoContacto">Correo:"</string>
+    <string name="dondeEncontrarnos">Donde encontrarnos:</string>
 </resources>

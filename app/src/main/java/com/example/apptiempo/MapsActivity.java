@@ -67,7 +67,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         //final LatLng ElorrietaMarcador = new LatLng(ElorrietaLatitud,-ElorrietaLongitud);
         final LatLng ElorrietaMarcador = new LatLng(43.284593514838754,-2.9647297073437584);
-        mMap.addMarker(new MarkerOptions().position(ElorrietaMarcador).title("Marcado en Elorrieta").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
+        mMap.addMarker(new MarkerOptions().position(ElorrietaMarcador).title("Aqui puedes encontranos: Elorrieta").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
     }
 
 
