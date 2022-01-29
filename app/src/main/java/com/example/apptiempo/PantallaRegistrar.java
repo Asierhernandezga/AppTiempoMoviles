@@ -47,9 +47,6 @@ public class PantallaRegistrar extends AppCompatActivity {
         String contraseña = editContrasena.getText().toString();
         String repetirContraseña = editContrasena2.getText().toString();
 
-        String use ="";
-        String contr= "";
-
         if(!usuario.equals("") && !contraseña.equals("") && !repetirContraseña.equals("")) {
 
             if(contraseña.equals(repetirContraseña)) {

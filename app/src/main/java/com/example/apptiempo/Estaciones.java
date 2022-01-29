@@ -22,7 +22,6 @@ public class Estaciones extends AppCompatActivity {
     private int iDMunicipioExacto;
     private String estacionExacta;
     private Context esto = this;
-    private TextView textViewTareaGeneral;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -24,7 +24,6 @@ public class PantallaTop5 extends AppCompatActivity {
     private ConnectionClass connectionClass2;
     private Connection con2;
 
-    private TextView textViewProvincias;
     private TextView textViewBizkaia;
     private TextView textViewGipuzkoa;
     private TextView textViewAraba;
@@ -45,7 +44,6 @@ public class PantallaTop5 extends AppCompatActivity {
         setContentView(R.layout.activity_pantalla_top5);
 
         linearLayout = findViewById(R.id.linearLayoutt);
-        textViewProvincias = findViewById(R.id.textViewRegistros);
 
         textViewBizkaia = findViewById(R.id.textViewBizkaia);
         textViewGipuzkoa = findViewById(R.id.textViewGipuzkoa);
@@ -118,4 +116,11 @@ public class PantallaTop5 extends AppCompatActivity {
             con = null;
         }
     }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
+
 }

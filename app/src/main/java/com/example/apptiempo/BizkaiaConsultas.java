@@ -21,15 +21,12 @@ public class BizkaiaConsultas extends AppCompatActivity {
     private int idProvinciaBizkaia = 1;
     private String nameMunicipios;
     private Context esto = this;
-    private TextView textViewTareaGeneral;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bizkaia_consultas);
         linearLayout = findViewById(R.id.linearLayoutt);
-
-
 
         connectionClass = new ConnectionClass();
 

@@ -52,4 +52,14 @@
     <string name="pueblosTotalBizkaia">Puebos que tiene Bizkaia:</string>
     <string name="pueblosTotalGipuzkoa">Puebos que tiene Gipuzkoa:</string>
     <string name="pueblosTotalAraba">Puebos que tiene Araba:</string>
+    <string name="permisosCamaraAceptado">Permiso de camara aceptada</string>
+    <string name="permisosCamaraDenegado">Permiso de camara denegada</string>
+    <string name="permisosLocalizacionCoarseAceptada">Localizacion coarse aceptada</string>
+    <string name="permisosLocalizacionCoarseDenegada">Localizacion coarse denegada</string>
+    <string name="permisosLocalizacionFineAceptada">Localizacion fine aceptada</string>
+    <string name="permisosLocalizacionFineDenegada">Localizacion fine denegada</string>
+    <string name="permisosEscrituraArchivosAceptada">Escritura de archivos activada</string>
+    <string name="permisosEscrituraArchivosDenegada">Escritura de archivos denegada</string>
+    <string name="permisosLecturaArchivosAceptada">Lectura de archivos activada</string>
+    <string name="permisosLecturaArchivosDenegada">Lectura de archivos denegada</string>
 </resources>

@@ -21,7 +21,6 @@ public class ArabaConsultas extends AppCompatActivity {
     private int idProvinciaAraba = 3;
     private String nameMunicipios;
     private Context esto = this;
-    private TextView textViewTareaGeneral;
 
 
     @Override
@@ -29,8 +28,6 @@ public class ArabaConsultas extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_araba_consultas);
         linearLayout = findViewById(R.id.linearLayoutt);
-
-
 
         connectionClass = new ConnectionClass();
 

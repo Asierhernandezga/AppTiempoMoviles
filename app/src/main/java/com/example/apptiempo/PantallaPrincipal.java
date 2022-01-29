@@ -15,15 +15,12 @@ import android.widget.Toast;
 
 public class PantallaPrincipal extends AppCompatActivity {
 
-    private Button btnAbrirPermisos;
     private String[] PERMISSIONS;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_principal);
-
-        btnAbrirPermisos = findViewById(R.id.btnAbrirPermisos);
 
         PERMISSIONS = new String[] {
 
@@ -88,29 +85,29 @@ public class PantallaPrincipal extends AppCompatActivity {
         if (requestCode == 1) {
 
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(this, "Camera Permission is granted", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.permisosCamaraAceptado, Toast.LENGTH_SHORT).show();
             }else {
-                Toast.makeText(this, "Camera Permission is denied", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.permisosCamaraDenegado, Toast.LENGTH_SHORT).show();
             }
             if (grantResults[1] == PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(this, "Coarse location accepted", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.permisosLocalizacionCoarseAceptada, Toast.LENGTH_SHORT).show();
             }else {
-                Toast.makeText(this, "Coarse location accepted", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.permisosLocalizacionCoarseDenegada, Toast.LENGTH_SHORT).show();
             }
             if (grantResults[2] == PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(this, "Fine location accepted", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.permisosLocalizacionFineAceptada, Toast.LENGTH_SHORT).show();
             }else {
-                Toast.makeText(this, "Fine location accepted", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.permisosLocalizacionFineDenegada, Toast.LENGTH_SHORT).show();
             }
             if (grantResults[3] == PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(this, "Escritura de archivos activada", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.permisosEscrituraArchivosAceptada, Toast.LENGTH_SHORT).show();
             }else {
-                Toast.makeText(this, "Escritura de archivos denegada", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.permisosEscrituraArchivosDenegada, Toast.LENGTH_SHORT).show();
             }
             if (grantResults[4] == PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(this, "Lectura de archivos activada", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.permisosLecturaArchivosAceptada, Toast.LENGTH_SHORT).show();
             }else {
-                Toast.makeText(this, "Escritura de archivos denegada", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.permisosLecturaArchivosDenegada, Toast.LENGTH_SHORT).show();
             }
         }
     }

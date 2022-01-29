@@ -21,8 +21,6 @@ public class GipuzkoaConsultas extends AppCompatActivity {
     private int idProvinciaGipuzkoa = 2;
     private String nameMunicipios;
     private Context esto = this;
-    private TextView textViewTareaGeneral;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
