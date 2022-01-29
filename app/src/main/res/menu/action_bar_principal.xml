@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/abHome"
+        android:icon="@mipmap/ic_launcher_round"
+        android:title="@string/pantallaPrincipal"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/abAcercaDe"
+        android:icon="@android:drawable/ic_dialog_info"
+        android:title="@string/acercaDe"
+        app:showAsAction="always" />
+</menu>

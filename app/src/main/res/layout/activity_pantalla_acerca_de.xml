@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E6DED6"
     tools:context=".PantallaAcercaDe">
 
     <LinearLayout
@@ -121,7 +122,8 @@
                 android:id="@+id/txtCorreo2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="asier.hernandezga@elorrieta-errekamari.com" />
+                android:text="asier.hernandezga@elorrieta-errekamari.com"
+                android:textSize="12sp" />
 
         </TableRow>
 

@@ -9,6 +9,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -31,6 +33,26 @@ public class PantallaPrincipal extends AppCompatActivity {
                 Manifest.permission.READ_EXTERNAL_STORAGE
         };
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.action_bar_principal, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        ActionBarOpciones abOpciones = new ActionBarOpciones();
+        int id = item.getItemId();
+
+        if (id==R.id.abAcercaDe) {
+            abOpciones.abAcercaDe(this);
+        }
+        if(id == R.id.abHome){
+            abOpciones.abHome(this);
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     public void abrirFoto(View view){

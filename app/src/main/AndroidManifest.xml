@@ -33,7 +33,9 @@
         android:theme="@style/Theme.AppTiempo">
         <activity
             android:name=".PantallaAcercaDe"
-            android:exported="true" />
+            android:exported="true"
+            android:label="@string/acercaDe" />
+
         <activity
             android:name=".PantallaTop5"
             android:exported="true" />
