@@ -9,8 +9,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayoutt"
-        android:layout_width="393dp"
-        android:layout_height="186dp"
+        android:layout_width="397dp"
+        android:layout_height="248dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,6 +38,13 @@
             android:layout_height="wrap_content"
             android:onClick="abrirProvincias"
             android:text="@string/Provincias" />
+
+        <Button
+            android:id="@+id/btnAbrirTop5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="abrirTop5"
+            android:text="@string/top5" />
 
         <Button
             android:id="@+id/btnAbrirPermisos"

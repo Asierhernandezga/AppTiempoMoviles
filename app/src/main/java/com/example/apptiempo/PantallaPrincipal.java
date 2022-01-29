@@ -54,6 +54,12 @@ public class PantallaPrincipal extends AppCompatActivity {
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
+    public void abrirTop5(View view){
+        Intent i = new Intent(this, PantallaTop5.class );
+        startActivity(i);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    }
+
     public void activarPermisos(View view){
         if (!hasPermissions(PantallaPrincipal.this,PERMISSIONS)) {
             ActivityCompat.requestPermissions(PantallaPrincipal.this,PERMISSIONS,1);

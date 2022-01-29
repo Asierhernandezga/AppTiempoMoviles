@@ -41,10 +41,15 @@
     <string name="permisoDenegado">Permiso Denegado</string>
     <string name="abrirPermisos">Permisos</string>
     <string name="Provincias">Provincias</string>
+    <string name="Municipios">Municipios</string>
     <string name="Bizkaia">Bizkaia</string>
     <string name="Araba">Araba</string>
     <string name="Gipuzkoa">Gipuzkoa</string>
     <string name="title_activity_maps_consulta">MapsActivityConsulta</string>
     <string name="estaciones">Estaciones</string>
     <string name="estacionesDatos">Estaciones Datos</string>
+    <string name="top5">Top 5</string>
+    <string name="pueblosTotalBizkaia">Puebos que tiene Bizkaia:</string>
+    <string name="pueblosTotalGipuzkoa">Puebos que tiene Gipuzkoa:</string>
+    <string name="pueblosTotalAraba">Puebos que tiene Araba:</string>
 </resources>

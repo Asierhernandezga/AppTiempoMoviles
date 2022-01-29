@@ -49,7 +49,6 @@ public class EstacionesDatos extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         String dato = bundle.getString("nombre");
 
-        connectionClass = new ConnectionClass();
 
         try {
             con = connectionClass.CONN();

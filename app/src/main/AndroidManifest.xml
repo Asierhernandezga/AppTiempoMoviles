@@ -32,6 +32,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppTiempo">
         <activity
+            android:name=".PantallaTop5"
+            android:exported="true" />
+        <activity
             android:name=".EstacionesDatos"
             android:exported="true" />
         <!--
