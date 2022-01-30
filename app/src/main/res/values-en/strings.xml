@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">AppTiempo</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="entrar">Enter</string>
+    <string name="registrar">Register</string>
+    <string name="crearRegistro">Create Register</string>
+    <string name="nombre">Name</string>
+    <string name="contrasena">Password</string>
+    <string name="repetirContrasena">Repeat Password</string>
+    <string name="errorContrasena">There was an error in your password</string>
+    <string name="entradaCorrecta">You have entered correctly</string>
+    <string name="registroCorrecto">You have registered successfully</string>
+    <string name="registroIncorrectoCamposVacios">You cannot leave any field empty</string>
+    <string name="registroContraseñaNoCoincide">Passwords do not match</string>
+    <string name="abrirMapa">Map</string>
+    <string name="pantallaPrincipal">Main screen</string>
+    <string name="pantallaLogin">Login</string>
+    <string name="pantallaRegistro">Register</string>
+    <string name="pantallaMapa">Maps</string>
+    <string name="pantallaMain">App Tiempo</string>
+    <string name="botonSiguiente">Next</string>
+    <string name="textoPortada">Application designed to check the current air condition\n\n
+        Designed in Elorrieta:\n
+        Asier Hernández\n
+        Iker Monzon\n
+        Iñigo Campos
+    </string>
+    <string name="abrirFoto">Photo</string>
+    <string name="abrirCompartir">Share</string>
+    <string name="btnCamara">Camera</string>
+    <string name="toastPermisoDenegado">Permission denied</string>
+    <string name="toastNoVolverAPreguntar">Dont ask again</string>
+    <string name="abriendoCamara">Opening the camera</string>
+    <string name="permisoNecesario">Permit Required</string>
+    <string name="permisoNecesarioCamaraDescripcion">This permission is needed to be able to take photos with your device</string>
+    <string name="permisoNecesarioAlmacenamientoDescripcion">This permission is needed to save files on your device</string>
+    <string name="ok">Ok</string>
+    <string name="cancelar">Cancel</string>
+    <string name="error">Error</string>
+    <string name="internetError">Connection error</string>
+    <string name="permisoAceptado">Permission Accepted</string>
+    <string name="permisoDenegado">Permission Denied</string>
+    <string name="abrirPermisos">Permission</string>
+    <string name="Provincias">Provinces</string>
+    <string name="Municipios">Municipalities</string>
+    <string name="Bizkaia">Bizkaia</string>
+    <string name="Araba">Araba</string>
+    <string name="Gipuzkoa">Gipuzkoa</string>
+    <string name="title_activity_maps_consulta">MapsActivityQuery</string>
+    <string name="estaciones">Seasons</string>
+    <string name="estacionesDatos">Stations Data</string>
+    <string name="top5">Top 5</string>
+    <string name="pueblosTotalBizkaia">Towns that Bizkaia has:</string>
+    <string name="pueblosTotalGipuzkoa">Towns that Gipuzkoa has:</string>
+    <string name="pueblosTotalAraba">Towns that Araba has:</string>
+    <string name="permisosCamaraAceptado">Camera permit accepted</string>
+    <string name="permisosCamaraDenegado">Camera permit denied</string>
+    <string name="permisosLocalizacionCoarseAceptada">Coarse localization accepted</string>
+    <string name="permisosLocalizacionCoarseDenegada">coarse localization denied</string>
+    <string name="permisosLocalizacionFineAceptada">Fine location accepted</string>
+    <string name="permisosLocalizacionFineDenegada">Fine location denied</string>
+    <string name="permisosEscrituraArchivosAceptada">File write enabled</string>
+    <string name="permisosEscrituraArchivosDenegada">File write denied</string>
+    <string name="permisosLecturaArchivosAceptada">File reading enabled</string>
+    <string name="permisosLecturaArchivosDenegada">File read denied</string>
+    <string name="acercaDe">About us</string>
+    <string name="nombreApp">App Name:</string>
+    <string name="versionApp">Version App:</string>
+    <string name="appVersion">1,0</string>
+    <string name="fechaVersionApp">Version date:</string>
+    <string name="correoContacto">Email:"</string>
+    <string name="dondeEncontrarnos">Where to find us:</string>
+</resources>

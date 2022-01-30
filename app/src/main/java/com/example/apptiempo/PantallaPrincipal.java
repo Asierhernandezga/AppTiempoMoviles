@@ -54,7 +54,7 @@ public class PantallaPrincipal extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-    
+
 
     public void abrirProvincias(View view){
         Intent i = new Intent(this, Provincias.class );

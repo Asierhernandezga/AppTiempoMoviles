@@ -21,9 +21,9 @@
     <string name="botonSiguiente">Siguiente</string>
     <string name="textoPortada">Aplicacion diseñada para consultar la condicion actual del aire\n\n
         Diseñada en Elorrieta:\n
+        Asier Hernández\n
         Iker Monzon\n
-        Iñigo Campos\n
-        Asier Hernández
+        Iñigo Campos
     </string>
     <string name="abrirFoto">Foto</string>
     <string name="abrirCompartir">Compartir</string>
@@ -50,9 +50,9 @@
     <string name="estaciones">Estaciones</string>
     <string name="estacionesDatos">Estaciones Datos</string>
     <string name="top5">Top 5</string>
-    <string name="pueblosTotalBizkaia">Puebos que tiene Bizkaia:</string>
-    <string name="pueblosTotalGipuzkoa">Puebos que tiene Gipuzkoa:</string>
-    <string name="pueblosTotalAraba">Puebos que tiene Araba:</string>
+    <string name="pueblosTotalBizkaia">Pueblos que tiene Bizkaia:</string>
+    <string name="pueblosTotalGipuzkoa">Pueblos que tiene Gipuzkoa:</string>
+    <string name="pueblosTotalAraba">Pueblos que tiene Araba:</string>
     <string name="permisosCamaraAceptado">Permiso de camara aceptada</string>
     <string name="permisosCamaraDenegado">Permiso de camara denegada</string>
     <string name="permisosLocalizacionCoarseAceptada">Localizacion coarse aceptada</string>
