@@ -51,6 +51,8 @@ public class PantallaFoto extends AppCompatActivity {
     private BitmapDrawable drawable;
     private Bitmap bitmap;
 
+    private String nombreImagen;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -156,17 +158,24 @@ public class PantallaFoto extends AppCompatActivity {
                 image.setImageBitmap(decodedImage);
                 */
 
-                PreparedStatement st = con.prepareStatement("insert into lugares_usuario values(?,?,?,?)");
-                //st.setString(1, "lavidalavidalavida.jpg");
-                st.setInt(1,1);
+                Bundle bundle = getIntent().getExtras();
+                String dato = bundle.getString("nombre");
+
+      Toast.makeText(this, dato, Toast.LENGTH_SHORT).show();
+
+                PreparedStatement st = con.prepareStatement("insert into lugares_usuario values(?,?,?,?,?)");
+
+                st.setString(1,"1");        //No puede repetir esto
                 st.setInt(2,1);
-                //st.setInt(2,imageString);
-                st.setString(3, rutaImagen);
-                st.setInt(4, 1);
+                st.setString(3, "a");
+                st.setString(4, rutaImagen);
+                st.setInt(5, 1);
 
                 st.execute();
                 is.close();
                 st.close();
+
+                Toast.makeText(this, "inserto", Toast.LENGTH_SHORT).show();
 
             } catch (FileNotFoundException | SQLException e) {
                 e.printStackTrace();
@@ -179,7 +188,7 @@ public class PantallaFoto extends AppCompatActivity {
    // }
 
     private File crearImagen() throws IOException {
-        String nombreImagen = "foto_";
+        nombreImagen = "foto_";
         File directorio = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
         File imagen = File.createTempFile(nombreImagen,".jpg",directorio);
 
@@ -214,7 +223,7 @@ public class PantallaFoto extends AppCompatActivity {
             throw  new RuntimeException(e);
         }
         startActivity(Intent.createChooser(shareint,"Share image Via:"));
-        
+
     }
 
 

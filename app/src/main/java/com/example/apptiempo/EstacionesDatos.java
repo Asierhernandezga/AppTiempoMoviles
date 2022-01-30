@@ -2,20 +2,39 @@ package com.example.apptiempo;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.os.StrictMode;
+import android.provider.MediaStore;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.FileProvider;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.Date;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 public class EstacionesDatos extends AppCompatActivity {
@@ -42,6 +61,24 @@ public class EstacionesDatos extends AppCompatActivity {
     private String HourGMT;
     private String Idbug;
 
+
+    //Fotos
+    private int STORAGE_PERMISSION_CODE = 1;
+
+    private static final int REQUEST_IMAGE_CAPTURE = 1;
+    private Button btnCamara;
+    private Button btnCamara2;
+    private ImageView imgView;
+    private String s;
+
+    private File imagenArchivo;
+    private  String rutaImagen;
+
+    private BitmapDrawable drawable;
+    private Bitmap bitmap;
+
+    private String nombreImagen;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,9 +86,16 @@ public class EstacionesDatos extends AppCompatActivity {
         linearLayout = findViewById(R.id.linearLayoutt);
         textViewRegistros = findViewById(R.id.textViewRegistros);
 
+
+        btnCamara = findViewById(R.id.btnCamara);
+        btnCamara2 = findViewById(R.id.btnCamara2);
+        imgView = findViewById(R.id.imageView);
+
+
         Bundle bundle = getIntent().getExtras();
         String dato = bundle.getString("nombre");
 
+        connectionClass = new ConnectionClass();
 
         try {
             con = connectionClass.CONN();
@@ -75,8 +119,6 @@ public class EstacionesDatos extends AppCompatActivity {
 
             Statement st1 = con.createStatement();
             ResultSet rs1 = st1.executeQuery(query1);
-
-
 
             while (rs1.next()) {
 
@@ -109,6 +151,7 @@ public class EstacionesDatos extends AppCompatActivity {
         } catch (Exception ex) {
             con = null;
         }
+
     }
 
     @Override
@@ -137,6 +180,15 @@ public class EstacionesDatos extends AppCompatActivity {
         String dato = bundle.getString("nombre");
 
         Intent i=new Intent(esto,MapsActivityConsulta.class);
+        i.putExtra("nombre", dato);
+        startActivity(i);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    }
+
+    public void abrirCamara(View view) {
+        String dato = Idbug;
+
+        Intent i=new Intent(esto,PantallaFoto.class);
         i.putExtra("nombre", dato);
         startActivity(i);
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);

@@ -26,6 +26,7 @@
         Asier Hernández
     </string>
     <string name="abrirFoto">Foto</string>
+    <string name="abrirCompartir">Compartir</string>
     <string name="btnCamara">Camara</string>
     <string name="toastPermisoDenegado">Permiso Denegado</string>
     <string name="toastNoVolverAPreguntar">No volver a preguntar</string>
