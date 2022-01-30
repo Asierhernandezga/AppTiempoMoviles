@@ -38,10 +38,12 @@
 
         <activity
             android:name=".PantallaTop5"
-            android:exported="true" />
+            android:exported="true"
+            android:label="@string/top5"/>
         <activity
             android:name=".EstacionesDatos"
-            android:exported="true" />
+            android:exported="true"
+            android:label="@string/estacionesDatos"/>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -60,19 +62,27 @@
             android:label="@string/title_activity_maps_consulta" />
         <activity
             android:name=".Estaciones"
-            android:exported="true" />
+            android:exported="true"
+            android:label="@string/estaciones"/>
+
         <activity
             android:name=".GipuzkoaConsultas"
-            android:exported="true" />
+            android:exported="true"
+            android:label="@string/Gipuzkoa"/>
         <activity
             android:name=".ArabaConsultas"
-            android:exported="true" />
+            android:exported="true"
+            android:label="@string/Araba"/>
+
         <activity
             android:name=".BizkaiaConsultas"
-            android:exported="true" />
+            android:exported="true"
+            android:label="@string/Bizkaia"/>
         <activity
             android:name=".Provincias"
-            android:exported="true" />
+            android:exported="true"
+            android:label="@string/Provincias"/>
+
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -86,7 +96,8 @@
 
         <activity
             android:name=".PantallaFoto"
-            android:exported="true" />
+            android:exported="true"
+            android:label="@string/abrirFoto"/>
         <activity
             android:name=".PantallaRegistrar"
             android:exported="true"

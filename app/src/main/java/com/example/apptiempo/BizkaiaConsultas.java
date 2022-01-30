@@ -1,10 +1,13 @@
 package com.example.apptiempo;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -53,6 +56,26 @@ public class BizkaiaConsultas extends AppCompatActivity {
             con = null;
         }
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.action_bar_principal, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        ActionBarOpciones abOpciones = new ActionBarOpciones();
+        int id = item.getItemId();
+
+        if (id==R.id.abAcercaDe) {
+            abOpciones.abAcercaDe(this);
+        }
+        if(id == R.id.abHome){
+            abOpciones.abHome(this);
+        }
+        return super.onOptionsItemSelected(item);
     }
 
             private void insertarOnClick(TextView textViewTareaGeneral) {
