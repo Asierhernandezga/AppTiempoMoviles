@@ -161,7 +161,7 @@ public class PantallaFoto extends AppCompatActivity {
                 Bundle bundle = getIntent().getExtras();
                 String dato = bundle.getString("nombre");
 
-      Toast.makeText(this, dato, Toast.LENGTH_SHORT).show();
+     // Toast.makeText(this, dato, Toast.LENGTH_SHORT).show();
 
                 PreparedStatement st = con.prepareStatement("insert into lugares_usuario values(?,?,?,?,?)");
 
@@ -175,7 +175,7 @@ public class PantallaFoto extends AppCompatActivity {
                 is.close();
                 st.close();
 
-                Toast.makeText(this, "inserto", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Se ha insertado correctamente", Toast.LENGTH_SHORT).show();
 
             } catch (FileNotFoundException | SQLException e) {
                 e.printStackTrace();
@@ -198,7 +198,7 @@ public class PantallaFoto extends AppCompatActivity {
 
     private void compartirImagen() {
 
-        Toast.makeText(this, "Entra", Toast.LENGTH_SHORT).show();
+       // Toast.makeText(this, "Entra", Toast.LENGTH_SHORT).show();
 
 
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();

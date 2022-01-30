@@ -102,7 +102,7 @@ public class EstacionesDatos extends AppCompatActivity {
 
             String query = "select ID from estaciones where Name = "  + "\'" + dato + "\'";
 
-            Toast.makeText(this, dato, Toast.LENGTH_SHORT).show();
+           // Toast.makeText(this, dato, Toast.LENGTH_SHORT).show();
 
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(query);
@@ -113,7 +113,7 @@ public class EstacionesDatos extends AppCompatActivity {
 
             }
 
-            Toast.makeText(this, Idbug, Toast.LENGTH_SHORT).show();
+           // Toast.makeText(this, Idbug, Toast.LENGTH_SHORT).show();
 
             String query1 = "select Date, HourGMT, COmgm3, CO8hmgm3, NOgm3, NO2gm3, NOXgm3, PM10gm3, PM25gm3, SO2gm3 from registros where ID_estacion = "  + "\'" + Idbug + "\' order by Date DESC";
 

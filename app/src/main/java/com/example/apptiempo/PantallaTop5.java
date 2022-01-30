@@ -74,7 +74,7 @@ public class PantallaTop5 extends AppCompatActivity {
             textViewBizkaia.setText(textViewBizkaia.getText() + " " + array.get(0));
             textViewGipuzkoa.setText(textViewGipuzkoa.getText() + " " + array.get(1));
             textViewAraba.setText(textViewAraba.getText() + " " + array.get(2));
-            Toast.makeText(this, numeroBug, Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, numeroBug, Toast.LENGTH_SHORT).show();
 
         } catch (Exception ex) {
             con = null;
@@ -113,7 +113,7 @@ public class PantallaTop5 extends AppCompatActivity {
 
             }
 
-            Toast.makeText(this, numeroBug, Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, numeroBug, Toast.LENGTH_SHORT).show();
 
         } catch (Exception ex) {
             con = null;
