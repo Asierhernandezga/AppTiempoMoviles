@@ -163,13 +163,12 @@ public class PantallaFoto extends AppCompatActivity {
 
      // Toast.makeText(this, dato, Toast.LENGTH_SHORT).show();
 
-                PreparedStatement st = con.prepareStatement("insert into lugares_usuario values(?,?,?,?,?)");
+                PreparedStatement st = con.prepareStatement("insert into lugares_usuario values(?,?,?,?)");
 
                 st.setString(1,"1");        //No puede repetir esto
-                st.setInt(2,1);
-                st.setString(3, "a");
-                st.setString(4, rutaImagen);
-                st.setInt(5, 1);
+                st.setInt(2,1);;
+                st.setString(3, rutaImagen);
+                st.setInt(4, 1);
 
                 st.execute();
                 is.close();
